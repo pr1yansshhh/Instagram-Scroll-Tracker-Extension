@@ -27,7 +27,7 @@ Turn your endless Instagram scrolling into a game! 🕹️ Track your distance, 
 
 📸 Screenshots
 
-(Add screenshots here! e.g., scroll distance, level-up, rewards popup)
+<img width="1920" height="1075" alt="image" src="https://github.com/user-attachments/assets/8ca6d0b1-96eb-47fb-9445-f58a9eed6796" />
 
 🛠 Installation
 
