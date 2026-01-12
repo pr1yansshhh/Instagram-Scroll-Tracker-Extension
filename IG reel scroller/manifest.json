@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Scroll Tracker with Levels",
+  "version": "1.0",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
