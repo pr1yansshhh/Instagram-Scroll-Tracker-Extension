@@ -22,7 +22,7 @@ let currentLevel = 0;
 let earnedLevels = [];
 let scrollPixels = 0;
 
-// Load data
+
 chrome.storage.local.get(["scrollPixels", "earnedLevels", "currentLevel"], (data) => {
   scrollPixels = data.scrollPixels ?? 0;
   earnedLevels = data.earnedLevels ?? [];
@@ -31,12 +31,12 @@ chrome.storage.local.get(["scrollPixels", "earnedLevels", "currentLevel"], (data
   updateUI(scrollPixels);
 });
 
-// Convert pixels to meters
+
 function pixelsToMeters(pixels) {
   return pixels * PIXEL_TO_CM / 100;
 }
 
-// Update UI
+
 function updateUI(pixels) {
   scrollPixels = pixels;
   const meters = pixelsToMeters(pixels);
@@ -68,7 +68,7 @@ function updateUI(pixels) {
   chrome.storage.local.set({ scrollPixels: scrollPixels });
 }
 
-// Animate level
+
 function animateLevel() {
   levelEl.classList.add("animate");
   levelNameEl.classList.add("animate");
@@ -78,7 +78,7 @@ function animateLevel() {
   }, 500);
 }
 
-// Update rewards UI
+
 function updateRewardsUI() {
   rewardEl.innerHTML = "";
   earnedLevels.forEach(r => {
@@ -88,14 +88,14 @@ function updateRewardsUI() {
   });
 }
 
-// Receive real-time updates from content.js
+
 chrome.runtime.onMessage.addListener((message) => {
   if (message.action === "updateScroll") {
     updateUI(message.scrollPixels);
   }
 });
 
-// Reset button
+
 resetBtn.onclick = () => {
   scrollPixels = 0;
   currentLevel = 0;
