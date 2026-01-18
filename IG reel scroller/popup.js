@@ -6,8 +6,8 @@ const progressTextEl = document.getElementById("progressText");
 const rewardEl = document.getElementById("reward");
 const resetBtn = document.getElementById("reset");
 
-const LEVEL_SIZE = 50; // meters per level
-const PIXEL_TO_CM = 2.54 / 96; // conversion from pixels to cm
+const LEVEL_SIZE = 50; 
+const PIXEL_TO_CM = 2.54 / 96; 
 
 const LEVEL_NAMES = [
   "NewBie",
